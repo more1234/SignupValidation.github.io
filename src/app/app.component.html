@@ -1,0 +1,41 @@
+<html>
+
+<body>
+  <div class="main">
+    <div class="container">
+      <div class="navbar">
+        <nav class="navbar-header">
+          <a class="navbar-brand" routerLink="/home">fiksar</a>
+          <ul class="nav navbar-nav" routerLinkActive="active">
+            <li class="nav-item"><a class="nav-link">How it Works</a></li>
+            <li class="nav-item"><a class="nav-link">Find a Job</a></li>
+            <li class="nav-item"><a class="nav-link">Login</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/signup">Sign Up</a></li>
+            <li class="nav-item"><a class="nav-link"><img src="./.././assets/images/language - material.png">&nbsp;ESP</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+       <table class="table">
+         <tr>
+           <td><img src="./../assets/images/Categories.png">&nbsp;All Categories</td>
+           <td><img src="./../assets/images/home-interface.png">&nbsp;Home</td>
+           <td><img src="./../assets/images/ic-business-center-24px.png">&nbsp;Business</td>
+           <td><img src="./../assets/images/ic-camera-24px.png">&nbsp;Photography</td>
+           <td><img src="./../assets/images/ic-book-24px.png">&nbsp;Lessons</td>
+           <td><img src="./../assets/images/theater.png">&nbsp;Entertaintments</td>
+         </tr>
+       </table>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

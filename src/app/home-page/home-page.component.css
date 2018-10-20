@@ -1,0 +1,8 @@
+.form-control{
+   background-image: url("./../../assets/images/home-interface.png");
+   background-repeat: no-repeat;
+   background-position: left;
+   background-size: auto;
+   position: relative;
+   padding: 0px 0px 0px 50px;
+}

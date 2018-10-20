@@ -1,0 +1,62 @@
+
+<div class="signup">
+<div class="jumbotron">
+  <form [formGroup]="form" (ngSubmit)="submitForm(form.value)">
+    <div class="form-group" [ngClass]="{'has-error':!form.controls['username'].valid && form.controls['username'].touched}">
+      <label>Username:</label>
+      <input class="form-control" type="text" placeholder="Username" [formControl]="form.controls['username']">
+      <!-- The hasError method will tell us if a particular error exists -->
+      <div *ngIf="form.controls['username'].hasError('required') && form.controls['username'].touched" class="alert alert-danger">You must include a user name.</div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error':!form.controls['password'].valid && form.controls['password'].touched}">
+      <label>Password</label>
+      <input class="form-control" type="password" placeholder="Password" [formControl]="form.controls['password']">
+      <!-- The hasError method can work with the built in validators but custom validators as well -->
+      <div *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched" class="alert alert-danger">You must include password.</div>
+      <div *ngIf="form.controls['password'].hasError('minlength') && form.controls['password'].touched" class="alert alert-danger">Your password must be at least 5 characters long.</div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error':!form.controls['username'].valid && form.controls['username'].touched}">  
+      <label>Email:</label>
+      <input class="form-control" type="email" placeholder="Email" [formControl]="form.controls['email']">
+      <!-- The hasError method will tell us if a particular error exists -->
+      <div *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched" class="alert alert-danger">You must include a valid Email.</div>
+    </div>
+
+    <div class="form-group" [ngClass]="{'has-error':!form.controls['email'].valid && form.controls['email'].touched}">
+      
+      <label>Contact Number:</label>
+      <input class="form-control" type="text" placeholder="Contact Number" [formControl]="form.controls['contact']">
+      <!-- The hasError method will tell us if a particular error exists -->
+      <div *ngIf="form.controls['contact'].hasError('required') && form.controls['contact'].touched" class="alert alert-danger">You must include a mobile number.</div>
+    </div>
+    <div class="form-group">
+      <label>Gender</label>
+      <div class="alert alert-danger" *ngIf="!form.controls['gender'].valid && form.controls['gender'].touched">You must select a gender.</div>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="gender" value="Male" [formControl]="form.controls['gender']">
+        Male
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="gender" value="Female" [formControl]="form.controls['gender']">
+        Female
+      </label>
+    </div>
+    
+    <div class="form-group" [ngClass]="{'has-error':!form.controls['birth'].valid && form.controls['birth'].touched}">
+      
+      <label>Birth Date:</label>
+      <input class="form-control" type="date" placeholder="Contact Number" [formControl]="form.controls['birth']">
+      <!-- The hasError method will tell us if a particular error exists -->
+      <div *ngIf="form.controls['birth'].hasError('required') && form.controls['birth'].touched" class="alert alert-danger">You must include a birth.</div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+    </div>
+  </form>
+</div>
+</div>

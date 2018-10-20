@@ -1,0 +1,25 @@
+.navbar-brand{
+
+   background-color: #0C8AF9;
+   color:white;
+   cursor: pointer; 
+}
+.nav-item :hover{
+    cursor: pointer;
+    color:#0C8AF9;
+}
+
+body html{
+    padding: 0px;
+    margin:0px
+}
+.main{
+background-image: url("../assets/images/Bitmap.png");
+   background-position: right;
+  background-repeat: no-repeat;
+height: 100vh;
+}
+table{
+width: 100%;
+border: 0px;
+}
